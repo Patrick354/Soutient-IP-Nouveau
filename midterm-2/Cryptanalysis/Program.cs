@@ -7,21 +7,10 @@ internal static class Program
     private static void Main()
     {
         // Put your tests here.
-        Console.WriteLine(Print(Tools.Histogram("ALED")));
+        Test();
 
     }
 
-    public static string Print(int[] tableau)
-    {
-        string res = "";
-        foreach (var VARIABLE in tableau)
-        {
-            res += VARIABLE;
-        }
-
-        return res;
-    }
-    
     private static void Test()
     {
         Test_Modulus_PositivePositive();

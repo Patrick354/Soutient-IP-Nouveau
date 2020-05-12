@@ -364,7 +364,7 @@ public static class Tools
         }
 
         x = 97;
-        z = 26;
+        z = 25;
         while (x <= 122)
         {
             while (i <= str.Length - 1)
