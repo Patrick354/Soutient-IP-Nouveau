@@ -9,8 +9,11 @@ internal static class Program
         // Put your tests here.
 
         Test();
-    }
+        Console.WriteLine(Caesar.Encrypt(("My exam is so interesting! Thanks ACDC <3")));
+        Console.WriteLine(Caesar.Decrypt("Pb hadp lv vr lqwhuhvwlqj! Wkdqnv DFGF <3"));
 
+    }
+    
     private static void Test()
     {
         Test_Modulus_PositivePositive();

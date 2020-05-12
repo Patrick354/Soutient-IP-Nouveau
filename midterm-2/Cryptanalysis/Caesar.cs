@@ -4,19 +4,43 @@ namespace Cryptanalysis
 {
 public class Caesar
 {
+    protected int key;
+
+    public int Key
+    {
+        get => key;
+        set => key = value;
+    }
+
     public Caesar(int key)
     {
-        throw new NotImplementedException();
+        key = this.key;
     }
 
-    public string Encrypt(string msg)
+    public static string Encrypt(string msg)
     {
-        throw new NotImplementedException();
+        int i = 0;
+        string res = "";
+        while (i <= msg.Length - 1)
+        {
+            res += Tools.RotChar(msg[i], 3);
+            i += 1;
+        }
+
+        return res; 
     }
 
-    public string Decrypt(string cypherText)
+    public static string Decrypt(string cypherText)
     {
-        throw new NotImplementedException();
+        int i = 0;
+        string res = "";
+        while (i <= cypherText.Length - 1)
+        {
+            res += Tools.RotChar(cypherText[i], -3);
+            i += 1;
+        }
+
+        return res; 
     }
     
     public static int GuessKey(string cypherText)
