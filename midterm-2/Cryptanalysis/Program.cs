@@ -7,11 +7,19 @@ internal static class Program
     private static void Main()
     {
         // Put your tests here.
+        Console.WriteLine(Print(Tools.Histogram("ALED")));
 
-        Test();
-        Console.WriteLine(Caesar.Encrypt(("My exam is so interesting! Thanks ACDC <3")));
-        Console.WriteLine(Caesar.Decrypt("Pb hadp lv vr lqwhuhvwlqj! Wkdqnv DFGF <3"));
+    }
 
+    public static string Print(int[] tableau)
+    {
+        string res = "";
+        foreach (var VARIABLE in tableau)
+        {
+            res += VARIABLE;
+        }
+
+        return res;
     }
     
     private static void Test()

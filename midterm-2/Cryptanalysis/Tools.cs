@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 
 namespace Cryptanalysis
 {
@@ -258,7 +259,7 @@ public static class Tools
                 }
                 else
                 {
-                    res = nouveau - n;
+                    res = nouveau + n;
                     chara = Convert.ToChar(res);
                     return chara;
                 }
@@ -302,7 +303,7 @@ public static class Tools
                 }
                 else
                 {
-                    res = nouveau - n;
+                    res = nouveau + n;
                     chara = Convert.ToChar(res);
                     return chara;
                 }
@@ -335,7 +336,58 @@ public static class Tools
 
     public static int[] Histogram(string str)
     {
-        throw new NotImplementedException();
+        int[] tableau = new int[51];
+        int z = 0;
+        int x = 65;
+        int i = 0;
+        int count = 0;
+        while (x <= 90)
+        {
+            while (i <= str.Length -1)
+            {
+                if (Convert.ToInt32(str[i]) == x)
+                {
+                    count += 1;
+                    i += 1;
+                }
+                else
+                {
+                    i += 1;
+                }
+            }
+
+            i = 0;
+            tableau[z] = count;
+            z += 1;
+            count = 0;
+            x += 1;
+        }
+
+        x = 97;
+        z = 26;
+        while (x <= 122)
+        {
+            while (i <= str.Length - 1)
+            {
+                if (Convert.ToInt32(str[i]) == x)
+                {
+                    count += 1;
+                    i += 1;
+                }
+                else
+                {
+                    i += 1;
+                }
+            }
+
+            i = 0;
+            tableau[z] = count;
+            z += 1;
+            count = 0;
+            x += 1;
+        }
+
+        return tableau;
     }
     
     public static string FilterLetters(string str)
